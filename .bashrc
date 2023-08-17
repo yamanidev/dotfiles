@@ -124,6 +124,3 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
-
-export needder_frontend="/home/drakkath/Repos/Work/needder/needer.com-frontend"
-export needder_backend="/home/drakkath/Repos/Work/needder/jobbing-website"
