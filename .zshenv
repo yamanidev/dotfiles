@@ -1,3 +1,3 @@
 export ZDOTDIR="$HOME/.config/zsh"
 
-export EDITOR=nvim
+export EDITOR=/opt/nvim-linux64/bin/nvim
