@@ -5,6 +5,7 @@ ZSH_THEME="robbyrussell"
 
 plugins=(
   git
+  command-not-found
   zsh-autosuggestions
   zsh-syntax-highlighting
 )
