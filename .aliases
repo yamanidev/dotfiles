@@ -24,3 +24,8 @@ if [ -x /usr/bin/dircolors ]; then
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
+
+# Claude Code
+alias cc-work='CLAUDE_CONFIG_DIR=$HOME/.claude-work claude'
+alias cc-personal='CLAUDE_CONFIG_DIR=$HOME/.claude-personal claude'
+
