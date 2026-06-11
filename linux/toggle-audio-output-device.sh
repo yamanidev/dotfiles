@@ -1,5 +1,4 @@
 #!/bin/bash
-# Keyboard shortcut: Super+Alt+A
 
 current=$(pactl get-default-sink)
 
@@ -24,3 +23,4 @@ done
 
 # desktop notification
 notify-send "Audio Output Switched" "Now using: $label"
+
