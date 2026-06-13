@@ -6,3 +6,10 @@ if [[ -x /opt/homebrew/bin/brew ]]; then
 elif [[ -x /usr/local/bin/brew ]]; then
   eval "$(/usr/local/bin/brew shellenv)"
 fi
+
+# Spicetify
+if [[ -d "$HOME/.spicetify" ]]; then
+  export PATH="$PATH:$HOME/.spicetify"
+else
+  print -u2 "⚠️  ~/.spicetify not found; not added to PATH (macos/os.zsh)"
+fi
