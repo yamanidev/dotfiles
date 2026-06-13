@@ -7,10 +7,10 @@ sink2="alsa_output.pci-0000_10_00.1.hdmi-stereo"     # Headset
 
 if [ "$current" = "$sink1" ]; then
     new_sink="$sink2"
-    label="Headset (HDMI)"
+    label="🎧 Headset (HDMI)"
 else
     new_sink="$sink1"
-    label="Speakers"
+    label="🔊 Speakers"
 fi
 
 # set default sink
@@ -22,5 +22,5 @@ pactl list short sink-inputs | while read stream; do
 done
 
 # desktop notification
-notify-send "Audio Output Switched" "Now using: $label"
+notify-send "🔀 Audio Output Switched" "Now using: $label"
 
