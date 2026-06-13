@@ -1,0 +1,17 @@
+# Linux-specific aliases
+
+# apt package manager (Debian/Ubuntu).
+alias update="sudo apt update"
+alias upgrade="sudo apt upgrade"
+alias listupg="apt list --upgradable"
+alias autoremove="sudo apt autoremove"
+
+# Colored ls + grep. GNU coreutils only: dircolors and the --color /
+# --group-directories-first flags don't exist on BSD/macOS ls.
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto --group-directories-first'
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi

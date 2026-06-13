@@ -1,0 +1,6 @@
+# macOS-specific aliases
+
+# Colored ls, BSD style. macOS ships BSD ls (no --color / dircolors); -G
+# enables color and CLICOLOR makes a bare `ls` colored too.
+export CLICOLOR=1
+alias ls='ls -G'
