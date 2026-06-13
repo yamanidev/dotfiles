@@ -11,6 +11,15 @@
 [init]
 	defaultBranch = main
 
+[push]
+	autoSetupRemote = true
+
+[fetch]
+	prune = true
+
+[column]
+	ui = auto
+
 # Work identity overlay: swaps in the work name/email for any repository under ~/Repos/Work/charik/
 [includeIf "gitdir:~/Repos/Work/charik/"]
 	path = ~/.config/git/config-work-charik
