@@ -1,0 +1,16 @@
+# Shared Git config (all machines). Git reads this from
+# $XDG_CONFIG_HOME/git/config (~/.config/git/config) — no ~/.gitconfig needed.
+
+[user]
+	name = yamanidev
+	email = elamine.yamani@gmail.com
+
+[core]
+	editor = nvim
+
+[init]
+	defaultBranch = main
+
+# Work identity overlay: swaps in the work name/email for any repository under ~/Repos/Work/charik/
+[includeIf "gitdir:~/Repos/Work/charik/"]
+	path = ~/.config/git/config-work-charik
