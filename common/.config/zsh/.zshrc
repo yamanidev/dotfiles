@@ -60,7 +60,10 @@ fi
 # pyenv (only initialise if it's actually installed)
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-command -v pyenv >/dev/null && eval "$(pyenv init - zsh)"
+if [[ -d $PYENV_ROOT/shims ]]; then
+  export PATH="$PYENV_ROOT/shims:$PATH"
+  pyenv() { unset -f pyenv; eval "$(command pyenv init - zsh)"; pyenv "$@"; }
+fi
 
 # User-local bins
 export PATH="$HOME/.local/bin:$PATH"
