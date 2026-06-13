@@ -22,6 +22,8 @@ cask "bitwarden"
 cask "firefox"
 # Web browser
 cask "google-chrome"
+# GPU-based terminal emulator
+cask "kitty"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
 # Peer to peer Bitorrent client
